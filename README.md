@@ -2,6 +2,21 @@
 ### Work Log
 - Thursday 25th April 2019 at 8:30 AM: Initiailize Project Image Segmentation
 - Thursday 25th April 2019 at 8:35 AM: Record key words
+- Thursday 25th April 2019 at 8:50 AM: study basic knowledges
+- Thursday 25th April 2019 at 9:00 AM: set up coding environment
+
+## Study Log
+- Thursday 25th April 2019 at 8:50 AM: CT scan
+  -motorized x-ray source
+  -narrow beams of x-rays
+  -rotating around the patient
+  -image slice can be displayed individually in 2 dimensional form, or stacked together to generate a 3 dimensional image
+- Thursday 25th April 2019 at 8:55 AM: DICOM
+  -short for Digital Imaging and Communications in Medicine (where is the O?)
+  -international standard to transmit, store, retrieve, print, process and display medical imaging information
+  -just a data format is all need to know, so far
+- Thursday 25th April 2019 at 9:00 AM: pydicom
+  -A python package for working with DICOM files
 
 ### Key Words
 - CT scan
