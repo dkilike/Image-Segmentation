@@ -3,7 +3,8 @@
 - Thursday 25th April 2019 at 8:30 AM: Initiailize Project Image Segmentation
 - Thursday 25th April 2019 at 8:35 AM: Record key words
 - Thursday 25th April 2019 at 8:50 AM: study basic knowledges
-- Thursday 25th April 2019 at 9:00 AM: set up coding environment
+- Thursday 25th April 2019 at 9:00 AM: set up PyCharm coding environment
+- Thursday 25th April 2019 at 9:30 AM: practise pydicom to play with the given DICOM files
 
 ## Study Log
 - Thursday 25th April 2019 at 8:50 AM: CT scan
