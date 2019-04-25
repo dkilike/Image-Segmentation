@@ -8,7 +8,7 @@ import glob
 
 # load the DICOM files
 files = []
-for fname in glob.glob(r'C:\Users\lxie021\OneDrive\CT scan Image Segmentation\Image-Segmentation\DICOM data\*', recursive=False):
+for fname in glob.glob(r'D:\One Drive Daily\OneDrive\CT scan Image Segmentation\Image-Segmentation\DICOM data\*', recursive=False):
     print("loading: {}".format(fname))
     files.append(pydicom.read_file(fname))
 
