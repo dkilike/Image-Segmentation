@@ -11,7 +11,9 @@
   - Thursday 25th April 2019 at 10:45 AM: end morning session
 - Thursday 25th April 2019 at 08:20 PM: evenning session
   - Thursday 25th April 2019 at 08:20 PM: figuring out DICOM metadata
-
+  - Thursday 25th April 2019 at 08:40 PM: finish up Question 1(a)
+  - Thursday 25th April 2019 at 09:00 PM: start to do Question 1(b)
+  - Thursday 25th April 2019 at 10:00 PM: end evenning session
 
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
@@ -34,8 +36,16 @@
     - example two: skin. Voxel will be a low number as skin does not hinder the x-rays penetration.
 - Thursday 25th April 2019 at 08:20 PM: evenning session
   - Thursday 25th April 2019 at 08:30 PM: Question 1(a) keywords
-    - 'SliceLocation' = z axis coordinate
-    - 'pixel_array' = voxel x&y intensity
+    - 'SliceLocation' is with respect to an arbitrary origin (thus, not reliable)
+    - 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system, relative to some origin.
+  - Thursday 25th April 2019 at 09:00 PM: How to detect metal objects from CT scan
+    - The presence of metal objects in the scan field can lead to severe streaking artifacts. They occur because the density of the metal is beyond the normal range that can be handled by the computer, resulting in incomplete attenuation profiles.
+
+### Uncertainties
+- It is not clear where the scanner coordinate is defined. Since 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system relative to some origin, I have to assume that IPP is originated at the scanner coordinate. Or in another words, I assume that the patient coordinate system is the same as the Scanner world coordinate space
+
+### ToDo List
+- Regarding Question 1 (a), the coordinate of the centre of the image volume is calculated by hard-coded program. This program can be refactorized to be more generic to any given CT scan slice set. But it is not needed for this practise.
 
 ### Key Words
 - CT scan
