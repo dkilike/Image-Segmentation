@@ -89,3 +89,10 @@ for s in slices:
     plt.imsave(src_path + ImageName, s.pixel_array>Threshold)
     print(ImageName + 'has been saved')
     NameCount+=1
+
+NameCount = 300
+for s in slices:
+    ImageName = '\Images\IM00' + str(NameCount)
+    plt.imsave(src_path + ImageName, s.pixel_array)
+    print(ImageName + 'has been saved')
+    NameCount+=1
