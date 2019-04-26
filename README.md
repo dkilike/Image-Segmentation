@@ -17,6 +17,14 @@
 - Friday 26th April 2019 at 06:00 PM: evenning session
   - Friday 26th April 2019 at 06:00 PM: figuring out metal detection
   - Friday 26th April 2019 at 06:15 PM: implement a threshold of 3000 voxel intensity for detecting metallic implants
+  - Friday 26th April 2019 at 07:10 PM: finish up Question 1(b)
+  - Friday 26th April 2019 at 07:10 PM: break
+  - Friday 26th April 2019 at 07:30 PM: start to do Question 1(c)
+  - Friday 26th April 2019 at 07:45 PM: study and play with https://github.com/zhixuhao/unet/tree/master/data/membrane
+  - Friday 26th April 2019 at 07:50 PM: start to implement my own image segmentation neural network
+  - Friday 26th April 2019 at 08:45 PM: image segmentation neural network is able to run
+  - Friday 26th April 2019 at 08:50 PM: set up web service for GPU training
+  - Friday 26th April 2019 at 09:00 PM: end evenning session
   
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
@@ -48,6 +56,8 @@
     - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Figure_1.png)
     - The CT scan slice occasionally shows some high voxel (about 2500) intensity surrounding the patient's body
     - 3000 should be a fair threshold to detect metallic implants for this dataset.
+  - Friday 26th April 2019 at 07:30 PM: Image Segmentation Neural Network
+    - pracise some online open source image segmentation training script
 
 ### Uncertainties
 - It is not clear where the scanner coordinate is defined. Since 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system relative to some origin, I have to assume that IPP is originated at the scanner coordinate. Or in another words, I assume that the patient coordinate system is the same as the Scanner world coordinate space.
@@ -94,3 +104,5 @@
 - pydicom
 - numpy
 - matplotlib
+- tensorflow
+- keras
