@@ -3,3 +3,4 @@ venv/
 .idea/
 DICOM data/
 SegmentationMask/*
+!SegmentationMask/.gitkeep
