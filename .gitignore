@@ -2,3 +2,4 @@
 venv/
 .idea/
 DICOM data/
+SegmentationMask/*

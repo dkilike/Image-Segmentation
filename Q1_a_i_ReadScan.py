@@ -10,7 +10,8 @@ import matplotlib.pyplot as plt
 import glob
 
 # load the DICOM files
-DICOM_dir_path = r'D:\One Drive Daily\OneDrive\CT scan Image Segmentation\Image-Segmentation\DICOM data'
+src_path = r'D:\One Drive Daily\OneDrive\CT scan Image Segmentation\Image-Segmentation'
+DICOM_dir_path = src_path + '\DICOM data'
 files = []
 for fname in glob.glob(DICOM_dir_path+'\*', recursive=False):
     print("loading: {}".format(fname))
@@ -58,3 +59,31 @@ coordinate_of_101th_slice = ImagePlanePosition_of_101th_slice + RowChangeInX_of_
 coordinate_of_ImageVolumeCentre = (coordinate_of_100th_slice+coordinate_of_101th_slice)/2
 
 print('iii. coordinates of the centre of the image volume is {} mm'.format(list(coordinate_of_ImageVolumeCentre)))
+
+# plot the maximum voxel intensity of each slice
+MaxVoxelList=[]
+MeanVoxelList=[]
+for s in slices:
+    MaxVoxelList.append(s.pixel_array.max())
+    MeanVoxelList.append(s.pixel_array.mean())
+plt.scatter(range(0,len(MaxVoxelList)), MaxVoxelList)
+plt.xlabel('slice index (1-200)')
+plt.ylabel('maximum voxel intensity')
+plt.title('Scatter of Max Voxel over Slice Index')
+plt.show()
+
+Threshold = 3000
+a1 = plt.subplot(2, 2, 1)
+plt.imshow(img3d[:, :, 30])
+a1 = plt.subplot(2, 2, 2)
+plt.imshow(img3d[:, :, 30]>Threshold)
+a1 = plt.subplot(2, 2, 3)
+plt.imshow(img3d[:, :, 176])
+a1 = plt.subplot(2, 2, 4)
+plt.imshow(img3d[:, :, 176]>Threshold)
+plt.show()
+
+NameCount = 300
+for s in slices:
+    plt.imsave(src_path + '\SegmentationMask\IM00' + str(NameCount), s.pixel_array>Threshold)
+    NameCount+=1
