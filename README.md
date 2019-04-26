@@ -22,7 +22,8 @@
   - Friday 26th April 2019 at 07:30 PM: start to do Question 1(c)
   - Friday 26th April 2019 at 07:45 PM: study and play with https://github.com/zhixuhao/unet/tree/master/data/membrane
   - Friday 26th April 2019 at 07:50 PM: start to implement my own image segmentation neural network
-  
+  - Friday 26th April 2019 at 08:45 PM: image segmentation neural network is able to run
+  - Friday 26th April 2019 at 08:50 PM: set up web service for GPU training
   
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
