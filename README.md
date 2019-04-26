@@ -45,13 +45,19 @@
     - The presence of metal objects in the scan field can lead to severe streaking artifacts. They occur because the density of the metal is beyond the normal range that can be handled by the computer, resulting in incomplete attenuation profiles.
 - Friday 26th April 2019 at 06:00 PM: evenning session
   - Friday 26th April 2019 at 06:05 PM: metal tends to attenuate x-rays
-    - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/Figure_1.png)
+    - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Figure_1.png)
     - The CT scan slice occasionally shows some high voxel (about 2500) intensity surrounding the patient's body
     - 3000 should be a fair threshold to detect metallic implants for this dataset.
 
 ### Uncertainties
 - It is not clear where the scanner coordinate is defined. Since 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system relative to some origin, I have to assume that IPP is originated at the scanner coordinate. Or in another words, I assume that the patient coordinate system is the same as the Scanner world coordinate space.
 - A hard-coded threshold of 3000 is used to detect metallic implants for the given dataset. This may not be a generic approach.
+
+### Results
+- Question 1 (a)
+  - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(a).PNG)
+- Question 1 (b)
+  - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(b).PNG)
 
 ### ToDo List
 - Regarding Question 1 (a), the coordinate of the centre of the image volume is calculated by hard-coded program. This program can be refactorized to be more generic to any given CT scan slice set. But it is not needed for this practise.
