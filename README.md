@@ -24,6 +24,7 @@
   - Friday 26th April 2019 at 07:50 PM: start to implement my own image segmentation neural network
   - Friday 26th April 2019 at 08:45 PM: image segmentation neural network is able to run
   - Friday 26th April 2019 at 08:50 PM: set up web service for GPU training
+  - Friday 26th April 2019 at 09:00 PM: end evenning session
   
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
