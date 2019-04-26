@@ -85,5 +85,7 @@ plt.show()
 
 NameCount = 300
 for s in slices:
-    plt.imsave(src_path + '\SegmentationMask\IM00' + str(NameCount), s.pixel_array>Threshold)
+    ImageName = '\SegmentationMask\IM00' + str(NameCount)
+    plt.imsave(src_path + ImageName, s.pixel_array>Threshold)
+    print(ImageName + 'has been saved')
     NameCount+=1
