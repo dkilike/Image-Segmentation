@@ -14,7 +14,7 @@ import image_slicer
 
 '''form a 3D array by stacking all CT scan slices'''
 # load the DICOM files
-src_path = r'D:\One Drive Daily\OneDrive\CT scan Image Segmentation\Image-Segmentation'
+src_path = r'C:\Users\GGPC\SegmentationTest\Image-Segmentation'
 DICOM_dir_path = src_path + '\DICOM data'
 
 # snapshot dicom file
@@ -44,6 +44,7 @@ img3d = np.zeros(img_shape)
 for i, s in enumerate(slices):
     img3d[:, :, i] = s.pixel_array
 
+input("Press Enter to continue showing Question 1 (a) results...")
 '''start solving Q1_a read and print'''
 # first two questions are straight-forward
 print()
@@ -66,6 +67,7 @@ coordinate_of_ImageVolumeCentre = (coordinate_of_100th_slice+coordinate_of_101th
 
 print('iii. coordinates of the centre of the image volume is {} mm'.format(list(coordinate_of_ImageVolumeCentre)))
 
+input("Press Enter to continue showing Question 1 (b) results...")
 '''start solving Q1_b'''
 # plot the maximum voxel intensity of each slice
 MaxVoxelList=[]
@@ -73,6 +75,8 @@ MeanVoxelList=[]
 for s in slices:
     MaxVoxelList.append(s.pixel_array.max())
     MeanVoxelList.append(s.pixel_array.mean())
+
+print('Close plot to continue')
 plt.scatter(range(0,len(MaxVoxelList)), MaxVoxelList)
 plt.xlabel('slice index (1-200)')
 plt.ylabel('maximum voxel intensity')
@@ -81,6 +85,8 @@ plt.show()
 
 # selection voxel intensity threshold of 3000
 Threshold = 3000
+
+print('Close plot of an mask dection example to continue')
 a1 = plt.subplot(2, 2, 1)
 plt.imshow(img3d[:, :, 30])
 a1 = plt.subplot(2, 2, 2)
@@ -91,6 +97,8 @@ a1 = plt.subplot(2, 2, 4)
 plt.imshow(img3d[:, :, 176]>Threshold)
 plt.show()
 
+
+input("Press Enter to continue generating images and masks to Folders: SegmentationMask(metal mask) and Images(ct scan slices)...")
 # generate images and masks
 NameCount = 300
 for s in slices:
@@ -98,7 +106,7 @@ for s in slices:
     img = s.pixel_array>Threshold
     img = img.astype('uint8')*255
     cv2.imwrite(src_path + ImageName, img)
-    print(ImageName + 'has been saved')
+    print(ImageName + ' has been saved')
     NameCount+=1
 
 NameCount = 300
@@ -106,17 +114,17 @@ for s in slices:
     ImageName = '\Images\IM00' + str(NameCount) + '.png'
     img = (s.pixel_array - img3d.min())/(img3d.max()-img3d.min())*255
     cv2.imwrite(src_path + ImageName, img)
-    print(ImageName + 'has been saved')
+    print(ImageName + ' has been saved')
     NameCount+=1
 
-NameCount = 300
-for s in slices:
-    ImageName = '\SegmentationBoneMask\IM00' + str(NameCount) + '.png'
-    img = s.pixel_array>0
-    img = img.astype('uint8')*255
-    cv2.imwrite(src_path + ImageName, img)
-    print(ImageName + 'has been saved')
-    NameCount+=1
+# NameCount = 300
+# for s in slices:
+#     ImageName = '\SegmentationBoneMask\IM00' + str(NameCount) + '.png'
+#     img = s.pixel_array>0
+#     img = img.astype('uint8')*255
+#     cv2.imwrite(src_path + ImageName, img)
+#     print(ImageName + ' has been saved')
+#     NameCount+=1
 
 # NameCount = 300
 # for s in slices:
