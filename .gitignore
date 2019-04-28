@@ -1,5 +1,4 @@
 
 venv/
 .idea/
-DICOM data/
 __pycache__/
