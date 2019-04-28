@@ -2,7 +2,4 @@
 venv/
 .idea/
 DICOM data/
-SegmentationMask/
 __pycache__/
-DownloadImages/
-Images/
