@@ -25,6 +25,9 @@
   - Friday 26th April 2019 at 08:45 PM: image segmentation neural network is able to run
   - Friday 26th April 2019 at 08:50 PM: set up web service for GPU training
   - Friday 26th April 2019 at 09:00 PM: end evenning session
+- Sunday 28th April 2019 at 07:00 AM: morning session
+  - Sunday 28th April 2019 at 07:00 AM: working on debug Image Segmentation Neural Network
+  - Sunday 28th April 2019 at 3:00 PM: organize code for github submission
   
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
@@ -57,7 +60,21 @@
     - The CT scan slice occasionally shows some high voxel (about 2500) intensity surrounding the patient's body
     - 3000 should be a fair threshold to detect metallic implants for this dataset.
   - Friday 26th April 2019 at 07:30 PM: Image Segmentation Neural Network
-    - pracise some online open source image segmentation training script
+    - practise some online open source image segmentation training script
+- Sunday 28th April 2019 at 07:00 AM: morning session
+  - Sunday 28th April 2019 at 07:00 AM: debug Segmentation NN
+    - binary_crossentropy does not work for metal masks dataset, which is very imbalanced, but works for balanced-class dataset, i.e. bone masks dataset, but
+    - Cannot add class weights for image segmentation training.
+    - try other loss functions
+    - dice_coef_loss seems to be highly recommended from online resources
+    - dice_coef_loss does not converge
+    - try playing with learning_rate, batchsize, etc.
+    - try checking data pipeline
+    - try augmentation
+    - try slicing method
+    - try debug
+    - try many things....
+    - solution: built a simpler Unet model, which finally converged.
 
 ### Uncertainties
 - It is not clear where the scanner coordinate is defined. Since 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system relative to some origin, I have to assume that IPP is originated at the scanner coordinate. Or in another words, I assume that the patient coordinate system is the same as the Scanner world coordinate space.
@@ -71,6 +88,7 @@
 
 ### ToDo List
 - Regarding Question 1 (a), the coordinate of the centre of the image volume is calculated by hard-coded program. This program can be refactorized to be more generic to any given CT scan slice set. But it is not needed for this practise.
+- fine tuning neural network is recommended to improve the model performance.
 
 ### Key Words
 - CT scan
