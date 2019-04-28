@@ -28,6 +28,10 @@
 - Sunday 28th April 2019 at 07:00 AM: morning session
   - Sunday 28th April 2019 at 07:00 AM: working on debug Image Segmentation Neural Network
   - Sunday 28th April 2019 at 3:00 PM: organize code for github submission
+  - Sunday 28th April 2019 at 3:00 PM: start to do Question 2
+  - Sunday 28th April 2019 at 3:30 PM: finish Question 2
+  - Sunday 28th April 2019 at 4:00 PM: update github and test
+  
   
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
@@ -99,6 +103,9 @@
 - The maximum voxel intensity
 - The mean voxel intensity
 - The coordinates of the centre of the image volume, in the scanner coordinate system
+- Measuring the anatomy of the hip joint
+- Key measurements such as the diameter of the hip socket (acetabulum)
+- a validation study to assess the accuracy of one such technology against manual measurements by a clinician
 
 ### Steps
 - Read scan and print out 
