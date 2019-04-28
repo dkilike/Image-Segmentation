@@ -84,11 +84,23 @@
 - It is not clear where the scanner coordinate is defined. Since 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system relative to some origin, I have to assume that IPP is originated at the scanner coordinate. Or in another words, I assume that the patient coordinate system is the same as the Scanner world coordinate space.
 - A hard-coded threshold of 3000 is used to detect metallic implants for the given dataset. This may not be a generic approach.
 
-### Results
+### Question 1 Results
 - Question 1 (a)
   - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(a).PNG)
 - Question 1 (b)
-  - ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(b).PNG)
+  - Left images are ct scan slices; Right images are found masks:![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(b).PNG)
+- Question 1 (c)
+  - Tensorboard training log (epoch_val_loss in form of dice_coef_loss is the metric to quatify the error between the segmentation by neural network and my answers in Question 1 (b). The validation dataset is not included in the training dataset and thus, the neural network was not trained by val_set.):
+    - No Augmentation: ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/NoAugmentation.PNG)
+    - With Augmentation: ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Augmentation.PNG)
+    - Augmentation (exhaustive training without overfitting): ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Augmentation(exhaustiveTraining).PNG)
+  - Results:
+    - Overview (left are the truth masks;right are the predicted masks): ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(c)Result.PNG)
+    - detailed example one (left are the truth masks;right are the predicted masks): ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(c)Result_1.PNG)
+    - detailed example two (left are the truth masks;right are the predicted masks): ![alt text](https://github.com/dkilike/Image-Segmentation/blob/master/snapshot/Q1(c)Result_2.PNG)
+
+### Question 2
+A Q2.pdf of Validation Study Outline is stored in this github repository.
 
 ### ToDo List
 - Regarding Question 1 (a), the coordinate of the centre of the image volume is calculated by hard-coded program. This program can be refactorized to be more generic to any given CT scan slice set. But it is not needed for this practise.
