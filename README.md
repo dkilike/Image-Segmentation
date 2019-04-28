@@ -1,3 +1,26 @@
+# build and run the code
+### Required Packages
+- pydicom
+- numpy
+- matplotlib
+- tensorflow
+- keras
+- cv2 (opencv-python)
+- image_slicer (recommended)
+- scikit-image
+
+### Run Script
+- Download or clone the repository to local directory.
+- Run Q1_ab.py (PractisePydicom.py is a practice script)
+  - change src_path to your local directory
+  - run the script and follow the instruction by Pressing Enter to continue
+- Run Q1_c_main.py (Q1_c_data.py and Q1_c_model.py contain necessary imported functions and classes) (Q1_c_legacy is a single but self-contained practise script)
+  - change src_path to your local directory
+  - this script will use pre-allocated datasets in folder: NeuralNetworkData (subfolders: train and test)
+  - Tensorboard training logs will be saved in folder: training_logs
+  - trained model will be save in SavedModel.hdf5 (Before you train any new model, this file still contains the most recent model)
+  - for each epoch, predicted masks of testing dataset will be generated in folder: NeuralNetworkData\test. (Before you train any new model, this folder still contains the most recent generated masks)
+
 # Image Segmentation
 ### Work Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
@@ -31,8 +54,7 @@
   - Sunday 28th April 2019 at 3:00 PM: start to do Question 2
   - Sunday 28th April 2019 at 3:30 PM: finish Question 2
   - Sunday 28th April 2019 at 4:00 PM: update github and test
-  
-  
+
 ### Study Log
 - Thursday 25th April 2019 at 08:30 AM: morning session
   - Thursday 25th April 2019 at 08:50 AM: CT scan
@@ -83,6 +105,8 @@
 ### Uncertainties
 - It is not clear where the scanner coordinate is defined. Since 'Image Position Patient' gives the coordinates of the first voxel in the image in the "RAH" coordinate system relative to some origin, I have to assume that IPP is originated at the scanner coordinate. Or in another words, I assume that the patient coordinate system is the same as the Scanner world coordinate space.
 - A hard-coded threshold of 3000 is used to detect metallic implants for the given dataset. This may not be a generic approach.
+- I only detect metallic implants inside patient's body.
+- Neural Network is NOT fine-tuned to give the best performance yet. But it is not necessary to refine things further which spending too much time chasing things that will be of marginal benefit at this stage.
 
 ### Question 1 Results
 - Question 1 (a)
@@ -136,10 +160,3 @@ A Q2.pdf of Validation Study Outline is stored in this github repository.
 - The distance between each slice is 1.6 mm
 - Use DICOM header to help you calculate coordinates
 - pydicom package
-
-### Required Packages
-- pydicom
-- numpy
-- matplotlib
-- tensorflow
-- keras
