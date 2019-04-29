@@ -23,7 +23,7 @@
 
 # Image Segmentation
 ### Work Log
-- Thursday 25th April 2019 at 08:30 AM: morning session
+- Thursday 25th April 2019 at 08:30 AM: morning session (2 hours)
   - Thursday 25th April 2019 at 08:30 AM: Initiailize Project Image Segmentation
   - Thursday 25th April 2019 at 08:35 AM: Record key words
   - Thursday 25th April 2019 at 08:50 AM: study basic knowledges
@@ -32,12 +32,12 @@
   - Thursday 25th April 2019 at 09:50 AM: download MicroDicom viewer to checkout the given DICOM files
   - Thursday 25th April 2019 at 10:00 AM: start to do Question 1(a)
   - Thursday 25th April 2019 at 10:45 AM: end morning session
-- Thursday 25th April 2019 at 08:20 PM: evenning session
+- Thursday 25th April 2019 at 08:20 PM: evenning session (2 hours)
   - Thursday 25th April 2019 at 08:20 PM: figuring out DICOM metadata
   - Thursday 25th April 2019 at 08:40 PM: finish up Question 1(a)
   - Thursday 25th April 2019 at 09:00 PM: start to do Question 1(b)
   - Thursday 25th April 2019 at 10:00 PM: end evenning session
-- Friday 26th April 2019 at 06:00 PM: evenning session
+- Friday 26th April 2019 at 06:00 PM: evenning session (3 hours)
   - Friday 26th April 2019 at 06:00 PM: figuring out metal detection
   - Friday 26th April 2019 at 06:15 PM: implement a threshold of 3000 voxel intensity for detecting metallic implants
   - Friday 26th April 2019 at 07:10 PM: finish up Question 1(b)
@@ -48,7 +48,7 @@
   - Friday 26th April 2019 at 08:45 PM: image segmentation neural network is able to run
   - Friday 26th April 2019 at 08:50 PM: set up web service for GPU training
   - Friday 26th April 2019 at 09:00 PM: end evenning session
-- Sunday 28th April 2019 at 07:00 AM: morning session
+- Sunday 28th April 2019 at 07:00 AM: morning session (9 hours)
   - Sunday 28th April 2019 at 07:00 AM: working on debug Image Segmentation Neural Network
   - Sunday 28th April 2019 at 3:00 PM: organize code for github submission
   - Sunday 28th April 2019 at 3:00 PM: start to do Question 2
